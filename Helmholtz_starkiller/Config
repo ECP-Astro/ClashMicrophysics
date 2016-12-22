@@ -1,0 +1,39 @@
+#  Configuration file for helmholtz eos
+#  [physics/Eos/EosMain/Helmholtz]
+DEFAULT SpeciesBased 
+
+EXCLUSIVE SpeciesBased Ye
+
+D   eos_coulombMult coulomb correction multiplier
+PARAMETER eos_coulombMult  REAL    1.0
+
+D eos_tolerance  tolerance for the Newton-Raphson iterations
+PARAMETER eos_tolerance REAL    1.e-8
+
+D eos_maxNewton  maximum number of Newton-Raphson iterations to try.
+PARAMETER eos_maxNewton INTEGER 50
+
+D eos_forceConstantInput Helmholtz routines can allow input EINT or PRES 
+D &              to change on output to preserve equilibrium.  This switch 
+D &              forces a constant input of EINT or PRES
+PARAMETER eos_forceConstantInput BOOLEAN false 
+
+D eos_coulombAbort  Abort if pressures become negative.  Otherwise, issue 
+D &              a warning message and continue
+PARAMETER eos_coulombAbort BOOLEAN true
+
+D eos_larget default upper bracket bound and used to fake
+D &           temperature if it tries to go too high.
+D & Currently, only used in the Helmholtz/ExternalAbarZbar implementation of Eos.
+PARAMETER larget REAL 1.e20
+
+D eos_fluffDens material below this density has its energy replaced
+D &              if its temperature falls below smallt.
+D &              This should be a small density for enery conservation reasons.
+D & Only used in the Helmholtz/ExternalAbarZbar implementation of Eos.
+PARAMETER eos_fluffDens REAL 0.0
+
+VARIABLE gamc  EOSMAPINOUT: GAMC   # sound-speed gamma
+VARIABLE game  EOSMAPOUT:   GAME   # energy gamma
+
+DATAFILES helm_table.dat

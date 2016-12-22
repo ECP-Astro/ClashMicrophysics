@@ -1,0 +1,11 @@
+#  Configuration file for helmholtz eos, with Species used
+#  [physics/Eos/EosMain/Helmholtz/SpeciesBased]
+REQUESTS Multispecies/MultispeciesMain
+
+D eos_singleSpeciesA  Single-species nucleon number for the gas 
+D &         (only used by Eos/Helmholtz when compiled w/o Multispecies)
+PARAMETER eos_singleSpeciesA         REAL    1.00  [0.0 to ]
+D eos_singleSpeciesZ  Single-species proton number for the gas  
+D &         (only used Eos/Helmholtz when compiled w/o Multispecies)
+PARAMETER eos_singleSpeciesZ         REAL    1.00  [0.0 to ]
+
