@@ -18,7 +18,7 @@ FLASH users will want to copy Helmholtz_starkiller/ into:
 
 (i.e. as a peer to `source/physics/Eos/EosMain/Helmholtz`) 
 
-Though the routines used in each case are identical, there are some small differences in implementation in the current
+Though the routines used in each case are essentially identical, there are some small differences in implementation in the current
 versions of CASTRO and FLASH that lead to small differences. Primary among these are:
 
 1) The Microphysics (Boxlib) version is set up to use the version of helm_table.dat that is packaged for Boxlib use, while the FLASH version
