@@ -1,6 +1,6 @@
-## Microphysics
+# Microphysics
 
-#N. B. This README is taken from the main BoxLib-Codes/Microphysics repository at
+## N. B. This README is taken from the main BoxLib-Codes/Microphysics repository at
 
 `https://github.com/BoxLib-Codes/Microphysics/`
 
